@@ -1,0 +1,444 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+
+body {
+	background: #E9ECF4;
+	color: #000000;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+	width: 100%;
+	max-width: 1700px;
+	margin: 0 auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 250px repeat(2, 1fr);
+	grid-template-rows: repeat(4, auto);
+}
+
+.contenedor > div,
+.contenedor .sidebar,
+.contenedor .contenido,
+.contenedor .footer{
+	background: white;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+
+.contenedor .header {
+	background: #12203E;
+	color: #fff;
+	
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+
+.contenedor .contenido {
+	grid-column: span 2;
+}
+
+.contenedor .sidebar {
+	grid-column-start: 1/2;
+	background: #faa43d;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px: 
+	grid-row: 2/-1;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2,
+.contenedor .widget-3{
+	background: #55a8fd;
+	color: #fff;
+	height: 30px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.contenedor .footer {
+	background: #12203e;
+	color:#fff;
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+
+.articulos {
+	width: 100%;
+	height: auto;
+	margin-right: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.elemento {
+	color: white;
+	margin: 5px;
+	width: 500px;
+	height: auto;
+	background: #610B21;
+	text-align: center;
+}
+
+#titulo {
+	margin-left: 15px;
+}
+img {
+	width: 400px;
+	height: 250px;
+}
+
+
+.contenedor .sidebar .publicidadpp{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 800px;
+	width: 200px;
+}
+
+.contenedor .sidebar .publicidadpp .publicidad{
+	background: #e25ffe;
+	height: 200px;
+	width: 200px;
+}
+/*-------------------------Menú-----------------------------*/
+header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.empresa {
+	padding: 40px 0;
+	margin-left: 20px;
+}
+.empresa a {
+	color: white;
+	text-decoration: none;
+}
+.empresa a i{
+	margin-right: 5px;
+	font-size: 25px;
+}
+.menu_bar {
+	display: none;
+}
+
+header nav {
+	z-index: 1000;
+	max-width: 1000px;
+	width: 100%;
+	margin: 20px auto;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	position: relative;
+}
+
+nav ul li:hover {
+	background: #E6344A;
+}
+nav ul li a {
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	font-size: 15px;
+	padding: 20px;
+}
+
+nav ul li a i{
+	margin-right: 10px;
+}
+
+article footer a {
+	text-decoration: none;
+}
+
+#learn {
+	color: #FFFFFF;
+	margin-right: 10px;
+}
+
+a {
+	color: #FFFFFF;
+	
+}
+footer {
+	text-align: center;
+}
+
+.somos {
+	padding: 10px;
+	background: rgba(0,0,0,.1);
+}
+
+.somos .quienes {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+figure .hamster {
+	width: 400px;
+	height: 350px;
+}
+
+/*----------------------Submenu-------------------------*/
+header nav ul li:hover .children {
+	display: block;
+}
+
+header nav ul li .children {
+	display: none;
+	background: #011826;
+	position: absolute;
+	width: 130%;
+	z-index: 1000;
+}
+
+header nav ul li .children li {
+	display: block;
+	overflow:hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a{
+	display: block;
+}
+
+header nav ul li .children li a i{
+	float: right;
+	position: relative;
+	font-size: 7px;
+	top: 4px;
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+header nav ul li i {
+	position: relative;
+	top: 2px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/*___________________Barra de busqueda de la tienda___________________*/
+
+.tienda hr {
+	height: 10px;
+	background: #000;
+	width: 100%;
+}
+.busqueda {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.busqueda input{
+	margin-top: 20px;
+	height: 33px;
+	width: 60%;
+}
+
+.busqueda button {
+	margin-top: 20px;
+	height: 35px;
+	border: 1px solid #ccc;
+	border-left: none;
+	color: #545454;
+	background: #f8f8f8;
+	padding: 0 25px;
+	cursor: pointer;
+}
+
+/*_____________Apartado de la tienda_________________*/
+
+
+.bolso {
+	background: #efefef;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: repeat(3, auto); ;
+	text-align: center;
+	
+
+}
+.bolso .productos {
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+	height: auto;
+	width: auto;
+}
+
+.bolso figure {
+	margin-top: 10px;
+	height: auto;
+	width: 90%;
+}
+.foto {
+	background: #ffffff;
+	margin-top: 15px;
+}
+.more {
+	text-decoration: none;
+	color: #000;
+
+}
+
+.more .fas {
+	color: #000;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+
+/*____________Formulario_______________*/
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 15px 0;
+	align-items: center;
+}
+.formulario {
+	font-size: 23px;
+	width: 350px;
+}
+
+#comen {
+	height: auto;
+}
+#btn {
+	font-size: 15px;
+	width: 20%;
+}
+/*----------------Submenu Responsive-------------------*/
+@media screen and (max-width: 800px) {
+	/*.menu_bar {
+		display: block;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		background: #E6344A;
+	}
+	
+	.menu_bar .bt-menu {
+		
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	
+	.menu_bar i {
+		margin-right: 30px;
+		float: right;
+		font-size: 40px;
+	}
+	
+	header nav {
+		background: #011826;
+		width: 80%;
+		height: calc(100% - 60px);
+		position: fixed;
+		right: 100%;
+		margin: 0;
+		overflow: scroll;
+		
+	}
+	
+	header nav ul li {
+		display: block;
+		float: 
+		border-bottom: 1px solid rgba(255,255,255,.5);
+	}
+	
+	header nav ul li a {
+		display: block;
+	}
+	
+	header nav ul li:hover .children {
+		display: none;
+	}
+	
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+	
+	header nav ul li .children li a {
+		margin-left: 20px;
+	}
+	header nav ul li #down{
+		float: right;
+	}*/
+	
+	
+	.empresa {
+	padding: 40px 0;
+	margin-left: 70px;
+	}
+	.empresa a {
+	color: white;
+	text-decoration: none;
+	}
+	.empresa a i{
+	margin-right: 10px;
+	font-size: 25px;
+	}
+	.contenedor .contenido {
+		grid-column: 1 / -1;
+	}
+
+	.contenedor .sidebar {
+		grid-row: 3/-1;
+		grid-column: 1/-1;
+	}
+
+	.contenedor .widget-1 {
+		grid-column: span 2;
+	}
+
+	.contenedor .widget-3 {
+		grid-column: span 3;
+	}
+	.contenedor .sidebar .publicidadpp{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	justify-content: space-between;
+	height: auto;
+	width: 400px;
+    }
+
+.contenedor .sidebar .publicidadpp .publicidad{
+	background: #e25ffe;
+	height: 100px;
+	width: 100px;
+    }
+}
